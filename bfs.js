@@ -12,7 +12,7 @@ module.exports = (function () {
                 var node = frontier[i];
                 fn(node);
                 levels[node] = level;
-                for (adj in graph[node]) {
+                for (var adj in graph[node]) {
                     if (typeof levels[adj] === 'undefined') {
                         next.push(adj);
                     }
